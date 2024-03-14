@@ -1,0 +1,64 @@
+$creepy-color: red;
+$bg-color: rgb(94, 7, 94);
+
+//Book Alignment
+@mixin mainsetup {
+    width: 150px;
+    margin-left: 40%;
+}
+
+//Books n Boxes
+@mixin boxes {
+    border-radius: 0 3px;
+    border: solid cornflowerblue;
+    margin-top: 20px;
+    padding: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: $creepy-color;
+    background-color: antiquewhite;
+    border-radius: 0 3px;
+    border: solid $bg-color;
+    opacity: 0.5;
+    margin-top: 10px;
+    text-shadow: 4px 2px $bg-color;
+}
+
+.welcome {
+    color: rgb(87, 196, 240);
+    text-align: center;
+
+}
+
+.below {
+    text-align: center;
+    color: chartreuse;
+}
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+.book {
+    @include mainsetup()
+}
+
+.box {
+    @include boxes()
+}
+
+.text {
+    position: relative;
+    bottom: 100px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 10px;
+}
